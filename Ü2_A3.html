@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<script>
+  $(document).ready(function() {
+     $('.cboxes').change(function() {
+         var image = $(this).siblings(".tinybox").find("img");
+ if ($(this).prop('checked')) {
+           image.show();  // This should show the associated tinypic with the same number as the cbox that was clicked.
+            }   
+        else {
+            image.hide();    // This should hide the associated tinypic with the same number as the cbox that was clicked.
+        }
+     });    
+   });       
+</script>
+
+<body>
+<li>
+   <input id="cbox2" type="checkbox" name="cbox2" class="cboxes" />
+   <label for="cbox2">Show</label>  
+   <div class="tinybox">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Hochschule_Bonn-Rhein-Sieg_Wolfgang_G%C3%B6ddertz_Induktion.jpg" alt="hbrs" id="tinypic2" style="display:none;" />
+   </div>
+</li>
+</body>
+</html>
