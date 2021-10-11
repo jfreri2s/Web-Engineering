@@ -1,30 +1,39 @@
 <!DOCTYPE html>
+<head>
+
+</head>
+<body>
+  <nav>
+    <a href="https://www2.inf.h-brs.de/~jfreri2s">Home</a> |
+    <a href="aufgaben.html">Aufgaben</a> |
+</nav> 
+
 <html>
 <head>
 <style>
+.responsive {
+  width: 100%;
+  height: auto;
+}
 </style>
 </head>
 <script>
-  $(document).ready(function() {
-     $('.cboxes').change(function() {
-         var image = $(this).siblings(".tinybox").find("img");
- if ($(this).prop('checked')) {
-           image.show();  // This should show the associated tinypic with the same number as the cbox that was clicked.
-            }   
-        else {
-            image.hide();    // This should hide the associated tinypic with the same number as the cbox that was clicked.
-        }
-     });    
-   });       
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}       
 </script>
 
 <body>
-<li>
-   <input id="cbox2" type="checkbox" name="cbox2" class="cboxes" />
-   <label for="cbox2">Show</label>  
-   <div class="tinybox">
-       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Hochschule_Bonn-Rhein-Sieg_Wolfgang_G%C3%B6ddertz_Induktion.jpg" alt="hbrs" id="tinypic2" style="display:none;" />
-   </div>
-</li>
+<input type="checkbox" id="checkbox" onclick="myFunction()" name="checkbox" value="Bike">
+<label for="checkbox">hide and show via checkbox</label><br>
+
+<div id="myDIV">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Hochschule_Bonn-Rhein-Sieg_Wolfgang_G%C3%B6ddertz_Induktion.jpg" alt="hbrs" width="500" height="500" class="responsive"/>
+</div> 
 </body>
 </html>
