@@ -3,62 +3,112 @@
     <link rel="stylesheet" href="../CSS/menu.css">
 </head>
 <style>
+    .grid {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  width: 98vw;
+  height: 98vh;
+}
+.box {
+  background: rgb(219, 231, 221);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
 </style>
+
 <body>
-    //TODO: grid einbauen
-    <div>
-        <header >
-          <nav class="header">
-             <ul id="horizontal">
-              <li class="lihorizontal"><a href="https://www2.inf.h-brs.de/~jfreri2s" class="ahorizontal"> Home </a></li>
-              <li class="lihorizontal"><a href="..html/aufgaben.html" class="ahorizontal"> Aufgaben </a></li>
-              <li class="lihorizontal"><a href="../html/about.html" class="ahorizontal"> About </a></li>
-              <li class="lihorizontal"><a href="../html/contact.html" class="ahorizontal" id="others" > Contact </a></li>
-            </ul>
-           </nav>
-        </header>
-      </div> 
-<nav>
-    <p> Uebung 1</p>
-    <ul>    
-        <li><a href="ue1_A4.html"> Aufgabe 1</a></li>
-    </ul>
-    <p> Uebung 2</p>
-    <ul>
-        <li><a href="ue2_A2.html"> Aufgabe 2</a></li>
-        <li><a href="ue2_A3.html"> Aufgabe 3</a></li>
-        <li><a href="ue2_A4.html"> Aufgabe 4</a></li>
-    </ul>
-    <p> Uebung 3</p>
-    <ul>
-        <li><a href="ue3_A1.html"> Aufgabe 1</a></li>
-        <li><a href="ue3_A2.html"> Aufgabe 2</a></li>
-        <li><a href="ue3_A3.html"> Aufgabe 3</a></li>
-    </ul>
-    <p> Uebung 4</p>
-    <ul>
-        <li><a href="ue4_A.html"> Aufgaben</a></li>
-    </ul>
-    <p> Uebung 5</p>
-    <ul>    
-        <li><a href="ue5_A1.html"> Aufgabe 1</a></li>
-        <li><a href="ue5_A2.html"> Aufgabe 1</a></li>
-    </ul>
-    <p> Uebung 6</p>
-    <ul>
-        <li><a href="ue6_A1.html"> Aufgabe 2</a></li>
-    </ul>
-</nav>
-<div>
-	<footer >
-		<nav class="footer">
-			<ul id="horizontal">
-				<li class="lihorizontal"><a href="https://www2.inf.h-brs.de/~jfreri2s" class="ahorizontal"> Home </a></li>
-              <li class="lihorizontal"><a href="..html/aufgaben.html" class="ahorizontal"> Aufgaben </a></li>
-              <li class="lihorizontal"><a href="../html/about.html" class="ahorizontal"> About </a></li>
-              <li class="lihorizontal"><a href="../html/contact.html" class="ahorizontal" id="others" > Contact </a></li>
-			</ul>
-		</nav>
-	</footer> 
-</div>
+    <div class="grid">
+        <div class="box">
+            <button class="button" onclick="location.href='../html/Aufgaben/ue1_A4.html';" >Uebung 1</button>
+        </div>
+        
+        <div class="box">
+            <button class="button" onclick="showDiv(2)">Uebung 2</button>
+            <div id="task2"  style="display:none;">
+                <button class="button" onclick="location.href='../html/Aufgaben/ue2_A2.html';" >Aufgabe 2</button>
+                <button class="button" onclick="location.href='../html/Aufgaben/ue2_A3.html';" >Aufgabe 3</button>
+                <button class="button" onclick="location.href='../html/Aufgaben/ue2_A4.html';" >Aufgabe 4</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <button class="button" onclick="showDiv(3)">Uebung 3</button>
+            <div id="task3"  style="display:none;">
+                <button class="button" onclick="location.href='../html/Aufgaben/ue3_A1.html';" >Aufgabe 1</button>
+                <button class="button" onclick="location.href='../html/Aufgaben/ue3_A2.html';" >Aufgabe 2</button>
+                <button class="button" onclick="location.href='../html/Aufgaben/ue3_A3.html';" >Aufgabe 3</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <button class="button" onclick="location.href='Aufgaben/ue4_A.html';" >Uebung 4</button>
+        </div>
+
+        <div class="box">
+            <button class="button" onclick="showDiv(5)">Uebung 5</button>
+            <div id="task5"  style="display:none;">
+                <button class="button" onclick="location.href='../html/Aufgaben/ue5_A1.html';" >Aufgabe 1</button>
+                <button class="button" onclick="location.href='../html/Aufgaben/ue5_A2.html';" >Aufgabe 2</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <button class="button" onclick="location.href='Aufgaben/ue6_A1.html';" >Uebung 6</button>
+        </div>
+        <div class="box">
+            <button class="button" onclick="location.href='Aufgaben/ue7_A.html';" >Uebung 7</button>
+        </div>
+
+        <div class="box">
+            <button class="button" onclick="showDiv(8)">Uebung 8</button>
+            <div id="task8"  style="display:none;">
+                <button class="button" onclick="location.href='../html/Aufgaben/ue8_A1.html';" >Aufgabe 1</button>
+                <button class="button" onclick="location.href='../html/Aufgaben/ue8_A2.html';" >Aufgabe 2</button>
+                <button class="button" onclick="location.href='../html/Aufgaben/ue8_A3.html';" >Aufgabe 3</button>
+            </div>
+        </div>
+        
+        <div class="box">
+            <button class="button" onclick="showDiv(9)">Uebung 9</button>
+            <div id="task9"  style="display:none;">
+                
+            </div>
+        </div>
+
+        <div class="box">
+            <button class="button" onclick="showDiv(10)">Uebung 10</button>
+            <div id="task10"  style="display:none;">
+                
+            </div>
+        </div>
+
+        <div class="box">
+            <button class="button" onclick="showDiv(11)">Uebung 11</button>
+            <div id="task11"  style="display:none;">
+                
+            </div>
+        </div>
+
+        <div class="box">
+            <button class="button" onclick="showDiv(12)">Uebung 12</button>
+            <div id="task12"  style="display:none;">
+                
+            </div>
+        </div>
+
+    </div>
 </body>
+<script>
+    function showDiv(x) {
+        var x = document.getElementById('task' + x);
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
