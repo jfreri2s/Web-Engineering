@@ -1,167 +1,151 @@
 <!DOCTYPE html>
-<head>
-
-</head>
-<body>
-  <nav>
-    <button class="button" onclick="location.href='../aufgaben.html';" >Zurück</button>
-  </nav> 
-
 <html>
+
 <head>
-<style>
-h1 {
-  text-align: center;
-}
-h2 {
-  text-align: center;
-}
-p {
-  text-align: center;
-}
-div {
-  border-radius: 25px;
-}
-
-div.form-group {
-  text-align: center;
-}
-button {
-  border-radius: 15px;
-}
-div.main{
-border-color: rgb(178, 214, 209);
-border-width: 20px;
-border-style: solid;
-
-
-}
-</style>
+  <meta charset="utf-8">
+  <title>Aufgabe 2</title>
+  <link rel="stylesheet" href="../../CSS/main.css">
 </head>
+<style>
+
+</style>
+
 <body>
-<div class= 'main'>
-  <h1 id = 'title'>Survey Form</h1>
-      <p id = 'description'>
-        <br>Let us know how we can improve freeCodeCamp</p>
-          <form id="survey-form">
-          <div class="form-group">
-        <label id="name-label" for="name">* Name </label>
-      <input
-        type="text"
-        name="name"
-        id="name"
-        class="form-control"
-        placeholder="Enter your name"
-        required
-      />
-      <div class="form-group">
-        <label id="email-label" for="name">* Email </label>
-      <input
-        type="Email"
-        name="email"
-        id="email"
-        class="form-control"
-        placeholder="Enter your Email" required
-      />
-        <div class="form-group">
-          <label id="number-label" for="name">* Age </label>
-      <input
-        type="Age"
-        name="Age"
-        id="number"
-        class="form-control"
-        placeholder="Enter your Age"
-        min="1" max="99"
-        required
-      />
-
-        </div>
-    </div>
-<br>
-    </div>
-        <div class="form-group">
-          <label>Which option best describes your current role?</label>
-      <select id="dropdown" name="role" class="form-control" required>
-        <option disabled selected value>Student</option>
-        <option value="student">Student</option>
-        <option value="Dozent">Dozent</option>
-      </select>
-    </div>
-<br>
-  <div>
-    <div class="form-group">
-      <label>*How likely is that you would recommend freeCodeCamp to a friend?</label>
-      <label>
-        <input
-          name="user-recommend"
-          value="definitely"
-          type="radio"
-          class="input-radio"
-          checked
-        />Definitely</label
-      >
-
-        <input
-          name="user-recommend"
-          value="maybe"
-          type="radio"
-          class="input-radio"
-        />Maybe</label
-      >
-
-
-        <input
-          name="user-recommend"
-          value="not-sure"
-          type="radio"
-          class="input-radio"
-        />Not sure</label
-      >
-    </div>
-<br>
-      <div class="form-group">
-        <label>What do you like most in FCC</label>
-      <label>
-        <select id="dropdown" name="role" class="form-control" required>
-        <option disabled selected value>Select an option</option>
-      </select>
-    </div>
-<br>
-    <div class="form-group">
-      <label>Things that should be improved in the future<span class="clue"><br>(Check all that apply)</span>
-     </label>
-
-      <label
-        ><input
-          name="prefer"
-          value="Front-end-projects"
-          type="checkbox"
-          class="input-checkbox"
-        />Front-end Projects</label
-      >
-      <label>
-        <input
-          name="prefer"
-          value="Back-end-projects"
-          type="checkbox"
-          class="input-checkbox"
-        />Back-end Projects</label
-      >
-      <label
-        ><input
-          name="prefer"
-          value="Data-visualization"
-          type="checkbox"
-          class="input-checkbox"
-        />Data Visualization</label
-      >
-    </div>
-    </div>
-    </div>
-</div>
-  </form>
-</div>
+  <div class="codeAndiframe">
+    <textarea>
+        <!DOCTYPE html>
+        <html>
+        
+        <head>
+        
+        </head>
+        
+        <body>
+            <html>
+        
+            <head>
+                <style>
+                    h1 {
+                        text-align: center;
+                    }
+        
+                    h2 {
+                        text-align: center;
+                    }
+        
+                    p {
+                        text-align: center;
+                    }
+        
+                    div {
+                        border-radius: 25px;
+                    }
+        
+                    div.form-group {
+                        text-align: center;
+                    }
+        
+                    button {
+                        border-radius: 15px;
+                    }
+        
+                    div.main {
+                        border-color: rgb(178, 214, 209);
+                        border-width: 20px;
+                        border-style: solid;
+        
+        
+                    }
+                </style>
+            </head>
+        
+            <body>
+                <div class='main'>
+                    <h1 id='title'>Survey Form</h1>
+                    <p id='description'>
+                        <br>Let us know how we can improve freeCodeCamp
+                    </p>
+                    <form id="survey-form">
+                        <div class="form-group">
+                            <label id="name-label" for="name">* Name </label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name"
+                                required />
+                            <div class="form-group">
+                                <label id="email-label" for="name">* Email </label>
+                                <input type="Email" name="email" id="email" class="form-control" placeholder="Enter your Email"
+                                    required />
+                                <div class="form-group">
+                                    <label id="number-label" for="name">* Age </label>
+                                    <input type="Age" name="Age" id="number" class="form-control" placeholder="Enter your Age"
+                                        min="1" max="99" required />
+        
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="form-group">
+                            <label>Which option best describes your current role?</label>
+                            <select id="dropdown" name="role" class="form-control" required>
+                                <option disabled selected value>Student</option>
+                                <option value="student">Student</option>
+                                <option value="Dozent">Dozent</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div>
+                            <div class="form-group">
+                                <label>*How likely is that you would recommend freeCodeCamp to a friend?</label>
+                                <label>
+                                    <input name="user-recommend" value="definitely" type="radio" class="input-radio"
+                                        checked />Definitely</label>
+        
+                                <input name="user-recommend" value="maybe" type="radio" class="input-radio" />Maybe</label>
+        
+        
+                                <input name="user-recommend" value="not-sure" type="radio" class="input-radio" />Not
+                                sure</label>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label>What do you like most in FCC</label>
+                                <label>
+                                    <select id="dropdown" name="role" class="form-control" required>
+                                        <option disabled selected value>Select an option</option>
+                                    </select>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label>Things that should be improved in the future<span class="clue"><br>(Check all that
+                                        apply)</span>
+                                </label>
+        
+                                <label><input name="prefer" value="Front-end-projects" type="checkbox"
+                                        class="input-checkbox" />Front-end
+                                    Projects</label>
+                                <label>
+                                    <input name="prefer" value="Back-end-projects" type="checkbox"
+                                        class="input-checkbox" />Back-end
+                                    Projects</label>
+                                <label><input name="prefer" value="Data-visualization" type="checkbox"
+                                        class="input-checkbox" />Data
+                                    Visualization</label>
+                            </div>
+                        </div>
+                </div>
+                </div>
+                </form>
+                </div>
+        
+            </html>
+        
+        </body>
+        
+        </html>
+  </textarea>
+    <iframe src="../Aufgaben/Lösungen/ue2_4.html"></iframe>
+  </div>
 
 
 </body>
+
 </html>

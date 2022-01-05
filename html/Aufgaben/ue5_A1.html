@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-	<nav>
-		<button class="button" onclick="location.href='../aufgaben.html';" >Zurück</button>
-	  </nav> 
+<nav>
+	<button class="button" onclick="location.href='../aufgaben.html';">Zurück</button>
+</nav>
+
 <body onload="performance()">
 	<div id="test">
-		Text, <code>code</code> <p><strong>und mehr Text</strong></p>
+		Text, <code>code</code>
+		<p><strong>und mehr Text</strong></p>
 	</div>
 	<div id="ergebnis">
 		<table>
@@ -34,15 +36,16 @@
 </body>
 
 <script>
-function performance() {
-	var testCases = ["innerHTML", "innerText", "textContent", "outerHTML"];
-	var text  = document.getElementById("test");
-	for(var i = 0; i < testCases.length; i++) {
-		var start = performance.now();
-		var x = document.getElementById("test")[testCases[i]];
-		var diff = performance.now() - start;
-		document.getElementById("read_" + i).innerHTML = diff;
+	function performance() {
+		var testCases = ["innerHTML", "innerText", "textContent", "outerHTML"];
+		var text = document.getElementById("test");
+		for (var i = 0; i < testCases.length; i++) {
+			var start = performance.now();
+			var x = document.getElementById("test")[testCases[i]];
+			var diff = performance.now() - start;
+			document.getElementById("read_" + i).innerHTML = diff;
+		}
 	}
-}
 </script>
+
 </html>

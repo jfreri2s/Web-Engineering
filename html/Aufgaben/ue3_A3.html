@@ -1,109 +1,143 @@
 <!DOCTYPE html>
+<html>
+
 <head>
-<style>
-.main-head {
-  grid-area: main-head;
-  width: 100%;
-  height: 75px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #363636;
-}
-.content {
-  display: flex;
-  grid-area: content;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
-}
-.sub-head {
-  font-size: 25px;
-  grid-area: sub-head;
-  justify-self: center;
-}
-.side {
-  display: flex;
-  position: relative;
-  grid-area: sidebar;
-  padding-left: 50px;
-}
-
-.main-footer {
-  grid-area: footer;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #011826;
-}
-.button-footer {
-  background-color: orange;
-  border-radius: 8px;
-  width: 500px;
-  height: 40px;
-}
-.button-article {
-  background-color: orange;
-  border-radius: 8px;
-  padding-left:  40px;
-  padding-right: 40px;
-  width: 100%;
-  height: 40px;
-}
-img {
-  border: 2px solid #555;
-  border-radius:2%;
-}
-.wrapper {
-  display: grid;
-  gap: 20px;
-  grid-template-areas:
-    "main-head"
-    "sub-head"
-    "sidebar"
-    "content"
-    "footer";
-}
-
-@media (min-width: 668px) {
-  .wrapper {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-    "main-head main-head"
-    "sub-head sub-head"
-    "sidebar content"
-    "footer footer";
-  }
-  
-}
-</style> 
+  <meta charset="utf-8">
+  <title>Aufgabe 1</title>
+  <link rel="stylesheet" href="../../CSS/main.css">
 </head>
-<body>
-  <nav>
-    <button class="button" onclick="location.href='../aufgaben.html';" >Zurück</button>
-  </nav> 
-  <div class="wrapper">
-    <div class="main-head">
-      <text style="color: white;">The book series  Testimonials  The Author  Free resources</text>
-   </div>
-    <header class="sub-head"><b>You dont know JavaScript</b></header>
+<style>
 
-    <div class="content">
-      <p> Dont just drift throug Javascript.</p>
-      <p> Understand how Javascript works.</p>
-      <p> Start your journey throgh the bumpy side of Javascript <p>
-        <button type="button" class="button-article">ORDER YOUR COPY NOW</button>
-      </div>
-    <aside class="side">
-      <img src="https://kaul.inf.h-brs.de/we/assets/img/landing-img.png" alt="HTML" width="450" height="600" ></aside>
-      <div class="main-footer">
-        <text style="color: white;">The first ebook in the book series is absolutely free.</text>
-        <button type="button" class="button-footer">FIND OUT MORE ABOUT THIS OFFER</button>
-     </div>
+</style>
+
+<body>
+  <div class="codeAndiframe">
+    <textarea>
+          <!DOCTYPE html>
+          <html>
+          
+          <head>
+              <style>
+                  .main-head {
+                      grid-area: main-head;
+                      width: 100%;
+                      height: 75px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      background: #363636;
+                  }
+          
+                  .content {
+                      display: flex;
+                      grid-area: content;
+                      flex-direction: column;
+                      justify-self: center;
+                      align-items: center;
+                  }
+          
+                  .sub-head {
+                      font-size: 25px;
+                      grid-area: sub-head;
+                      justify-self: center;
+                  }
+          
+                  .side {
+                      display: flex;
+                      position: relative;
+                      grid-area: sidebar;
+                      padding-left: 50px;
+                  }
+          
+                  .main-footer {
+                      grid-area: footer;
+                      width: 100%;
+                      height: 100px;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      background: #011826;
+                  }
+          
+                  .button-footer {
+                      background-color: orange;
+                      border-radius: 8px;
+                      width: 500px;
+                      height: 40px;
+                  }
+          
+                  .button-article {
+                      background-color: orange;
+                      border-radius: 8px;
+                      padding-left: 40px;
+                      padding-right: 40px;
+                      width: 100%;
+                      height: 40px;
+                  }
+          
+                  img {
+                      border: 2px solid #555;
+                      border-radius: 2%;
+                  }
+          
+                  .wrapper {
+                      display: grid;
+                      gap: 20px;
+                      grid-template-areas:
+                          "main-head"
+                          "sub-head"
+                          "sidebar"
+                          "content"
+                          "footer";
+                  }
+          
+                  @media (min-width: 668px) {
+                      .wrapper {
+                          grid-template-columns: 1fr 2fr;
+                          grid-template-areas:
+                              "main-head main-head"
+                              "sub-head sub-head"
+                              "sidebar content"
+                              "footer footer";
+                      }
+          
+                  }
+              </style>
+          </head>
+          
+          <body>
+              <div class="wrapper">
+                  <div class="main-head">
+                      <text style="color: white;">The book series Testimonials The Author Free resources</text>
+                  </div>
+                  <header class="sub-head"><b>You dont know JavaScript</b></header>
+          
+                  <div class="content">
+                      <p> Dont just drift throug Javascript.</p>
+                      <p> Understand how Javascript works.</p>
+                      <p> Start your journey throgh the bumpy side of Javascript
+                      <p>
+                          <button type="button" class="button-article">ORDER YOUR COPY NOW</button>
+                  </div>
+                  <aside class="side">
+                      <img src="https://kaul.inf.h-brs.de/we/assets/img/landing-img.png" alt="HTML" width="450" height="600">
+                  </aside>
+                  <div class="main-footer">
+                      <text style="color: white;">The first ebook in the book series is absolutely free.</text>
+                      <button type="button" class="button-footer">FIND OUT MORE ABOUT THIS OFFER</button>
+                  </div>
+              </div>
+          
+          
+          </body>
+          
+          </html>
+    </textarea>
+    <iframe src="../Aufgaben/Lösungen/ue3_3.html"></iframe>
   </div>
-  
-  
+
+
 </body>
+
+</html>

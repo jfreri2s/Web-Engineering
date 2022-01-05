@@ -1,63 +1,122 @@
 <!DOCTYPE html>
+<html>
+
 <head>
-<style>
-  .wrapper {
-  display: flex;  
-  flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;
-}
-
-.wrapper > * {
-  padding: 10px;
-  flex: 1 100%;
-}
-
-.header {
-  background: #FF2500;
-}
-.main {
-  background: #0533FF;
-}
-
-.aside-1 {
-  background: #2CEE27;
-}
-
-.aside-2 {
-  background: #EA3EFE;
-}
-@media only screen and (max-width: 600px) {
-  .main    { flex: 3 0px; }
-  .aside-1 { order: 1; } 
-  .main    { order: 2; }
-  .aside-2 { order: 3; }
-}
-@media all and (min-width: 600px) {
-  /* We tell both sidebars to share a row */
-  .aside{ flex: 4 }
-  .aside-2{ order: 4;}
-  
-}
-@media all and (min-width: 800px) {
-  /* We invert order of first sidebar and main
-   * And tell the main element to take twice as much width as the other two sidebars 
-   */
-  .main { flex: 2 0px; }
-  .aside-1 { order: 1; }
-  .main    { order: 2; }
-  .aside-2 { order: 3; }
-}
-</style> 
+  <meta charset="utf-8">
+  <title>Aufgabe 1</title>
+  <link rel="stylesheet" href="../../CSS/main.css">
 </head>
+<style>
+
+</style>
+
 <body>
-  <nav>
-    <button class="button" onclick="location.href='../aufgaben.html';" >Zurück</button>
-  </nav> 
-<div class="wrapper">
-  <header class="header">Red</header>
-  <article class="main"> Blue</article>
-  <aside class="aside aside-1">Green</aside>
-  <aside class="aside aside-2">Pink</aside>
-</div>
+  <div class="codeAndiframe">
+    <textarea>
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <style>
+                  .wrapper {
+                      display: flex;
+                      flex-flow: row wrap;
+                      font-weight: bold;
+                      text-align: center;
+                  }
+          
+                  .wrapper>* {
+                      padding: 10px;
+                      flex: 1 100%;
+                  }
+          
+                  .header {
+                      background: #FF2500;
+                  }
+          
+                  .main {
+                      background: #0533FF;
+                  }
+          
+                  .aside-1 {
+                      background: #2CEE27;
+                  }
+          
+                  .aside-2 {
+                      background: #EA3EFE;
+                  }
+          
+                  @media only screen and (max-width: 600px) {
+                      .main {
+                          flex: 3 0px;
+                      }
+          
+                      .aside-1 {
+                          order: 1;
+                      }
+          
+                      .main {
+                          order: 2;
+                      }
+          
+                      .aside-2 {
+                          order: 3;
+                      }
+                  }
+          
+                  @media all and (min-width: 600px) {
+          
+                      /* We tell both sidebars to share a row */
+                      .aside {
+                          flex: 4
+                      }
+          
+                      .aside-2 {
+                          order: 4;
+                      }
+          
+                  }
+          
+                  @media all and (min-width: 800px) {
+          
+                      /* We invert order of first sidebar and main
+             * And tell the main element to take twice as much width as the other two sidebars 
+             */
+                      .main {
+                          flex: 2 0px;
+                      }
+          
+                      .aside-1 {
+                          order: 1;
+                      }
+          
+                      .main {
+                          order: 2;
+                      }
+          
+                      .aside-2 {
+                          order: 3;
+                      }
+                  }
+              </style>
+          </head>
+          
+          <body>
+              <nav>
+                  <button class="button" onclick="location.href='../aufgaben.html';">Zurück</button>
+              </nav>
+              <div class="wrapper">
+                  <header class="header">Red</header>
+                  <article class="main"> Blue</article>
+                  <aside class="aside aside-1">Green</aside>
+                  <aside class="aside aside-2">Pink</aside>
+              </div>
+          </body>
+        </html>
+    </textarea>
+    <iframe src="../Aufgaben/Lösungen/ue3_1.html"></iframe>
+  </div>
+
+
 </body>
+
+</html>
