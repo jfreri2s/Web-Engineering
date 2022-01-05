@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main-head {
+            grid-area: header;
+            background-color: #FF2500;
+        }
+
+        .content {
+            background-color: #0533FF;
+            grid-area: content;
+        }
+
+        .side {
+            background-color: #2CEE27;
+            grid-area: left;
+        }
+
+        .wrapper>* {
+            padding: 20px;
+
+        }
+
+        .side-2 {
+            background-color: #EA3EFE;
+            grid-area: right;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-areas:
+                "header"
+                "left"
+                "content"
+                "right";
+        }
+
+        @media (min-width: 600px) {
+            .wrapper {
+                grid-template-columns: 1fr 2fr;
+                grid-template-areas:
+                    "header  header"
+                    "left content"
+                    "right right";
+            }
+        }
+
+        @media (min-width: 800px) {
+            .wrapper {
+                grid-template-columns: 1fr 3fr;
+                grid-template-areas:
+                    "header header  header"
+                    "left content right";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="main-head">Red</header>
+        <article class="content">Blue</article>
+        <aside class="side">Green</aside>
+        <div class="side-2">Pink</div>
+    </div>
+</body>
+
+</html>

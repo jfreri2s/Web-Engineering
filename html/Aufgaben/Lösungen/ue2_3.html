@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Aufgabe 2</title>
+</head>
+<style>
+    .responsive {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+<body>
+    <html>
+    <input type="checkbox" id="checkbox" onclick="myFunction()" name="checkbox" value="Bike">
+    <label for="checkbox">hide and show via checkbox</label><br>
+    <div id="myDIV">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Hochschule_Bonn-Rhein-Sieg_Wolfgang_G%C3%B6ddertz_Induktion.jpg"
+            alt="hbrs" width="500" height="500" class="responsive" />
+    </div>
+
+    </html>
+</body>
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }       
+</script>
