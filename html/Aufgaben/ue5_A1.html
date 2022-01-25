@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html>
-<nav>
-	<button class="button" onclick="location.href='../aufgaben.html';">Zurück</button>
-</nav>
 
 <body onload="performance()">
-	<div id="test">
-		Text, <code>code</code>
-		<p><strong>und mehr Text</strong></p>
-	</div>
-	<div id="ergebnis">
+	<div id="1">
 		<table>
 			<tr>
 				<th>Befehl</th>
@@ -17,35 +10,58 @@
 			</tr>
 			<tr>
 				<td>innerHTML</td>
-				<td id="read_0"></td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>innerText</td>
-				<td id="read_1"></td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>textContent</td>
-				<td id="read_2"></td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>outerHTML</td>
-				<td id="read_3"></td>
+				<td></td>
 			</tr>
 		</table>
 	</div>
 </body>
 
 <script>
-	function performance() {
-		var testCases = ["innerHTML", "innerText", "textContent", "outerHTML"];
-		var text = document.getElementById("test");
-		for (var i = 0; i < testCases.length; i++) {
-			var start = performance.now();
-			var x = document.getElementById("test")[testCases[i]];
-			var diff = performance.now() - start;
-			document.getElementById("read_" + i).innerHTML = diff;
-		}
+
+	const t0 = performance.now();
+	for (let i = 0; i < 100000; i++) {
+		document.getElementById(1).innerHTML = "" + i;
 	}
+	const t1 = performance.now();
+	const innerHTML = t1 - t0;
+
+	const t2 = performance.now();
+	for (let i = 0; i < 100000; i++) {
+		document.getElementById(1).innerText = "" + i;
+	}
+	const t3 = performance.now();
+	const innerText = t3 - t2;
+
+	const t4 = performance.now();
+	for (let i = 0; i < 100000; i++) {
+		document.getElementById(1).textContent = "" + i;
+	}
+	const t5 = performance.now();
+	const textContent = t5 - t4;
+
+	const t6 = performance.now();
+	for (let i = 0; i < 100000; i++) {
+		document.getElementById(1).outerHTML = `<div id=1>${i}</div>`;
+	}
+	const t7 = performance.now();
+	const outerHTML = t7 - t6;
+
+	const table = `<table><tr><th>innerHTML</th><th>innerText</th><th>textContent</th><th>outerHTML</th></tr>
+                              <tr><td>${innerHTML}ms</td><td>${innerText}ms</td><td>${textContent}ms</td><td>${outerHTML}ms</td></tr></table>`
+	document.getElementById(1).innerHTML = table;
+
 </script>
 
 </html>

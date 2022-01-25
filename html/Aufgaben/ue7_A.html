@@ -1,3 +1,105 @@
 <nav>
-    <button class="button" onclick="location.href='../aufgaben.html';" >Zurück</button>
-  </nav> 
+  <button class="button" onclick="location.href='../aufgaben.html';">Zurück</button>
+</nav>
+<script>
+
+  function curry(f, x) {
+    return function (y) {
+      return f(x, y);
+    };
+  }
+
+  function inc(x) {
+    return addf(x)(1);
+  }
+
+  function methodize() {
+    return function (y) {
+      return f(this, y);
+    };
+  }
+
+  function demothodize(f) {
+    return function (x, y) {
+      return f.call(x, y);
+    };
+  }
+
+  function twice(f) {
+    return function (x) {
+      return f(x, x);
+    };
+  }
+
+  function composeu(f, g) {
+    return function (x) {
+      return g(f(x));
+    };
+  }
+
+  function composeb(f, g) {
+    return function (x, y, z) {
+      return g(f(x, y), z);
+    };
+  }
+
+  function once(f) {
+    return function () {
+      var g = f;
+      f = null;
+
+      return g.apply(this, arguments);
+    };
+  }
+
+  function counterf(x) {
+    return {
+      inc: function () {
+        return x = x + 1;
+      },
+      dec: function () {
+        return x = x - 1;
+      }
+    };
+  }
+
+  function revocable(f) {
+    return {
+      invoke: function () {
+        f.apply(this, arguments);
+      },
+      revoke: function () {
+        f = null;
+      }
+    };
+  }
+
+  function ArrayWrapper() {
+    var inner = [];
+    var self = {
+      append: function (element) {
+        inner[inner.length] = element;
+      },
+      get: function (index) {
+        return inner[index];
+      },
+      store: function (index, element) {
+        inner[index] = element;
+      }
+    };
+    return self;
+  }
+
+  var test = ArrayWrapper();
+
+  test.append("Test1");
+  test.append("Test2");
+  test.append("Test3");
+  test.store(5, "Test4");
+  console.log(test.get(0));//Output : Test1
+  console.log(test.get(1));//Output : Test2
+  console.log(test.get(2));//Output : Test3
+  console.log(test.get(3));//Output : undefined
+  console.log(test.get(4));//Output : undefined
+  console.log(test.get(5));//Output : Test4
+</script>
