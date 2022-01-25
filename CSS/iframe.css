@@ -1,0 +1,22 @@
+body {
+  margin: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+iframe {
+  width: 70%;
+}
+
+textarea {
+  resize: none;
+  width: 30%;
+}
+
+.codeAndiframe {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  height: 100%;
+}
