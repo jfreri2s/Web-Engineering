@@ -2,41 +2,50 @@
 <html>
 
 <head>
-
 	<meta charset="utf-8">
+	<title>Aufgabe 4</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link rel="stylesheet" href="../../CSS/menu.css">
+	<link rel="stylesheet" href="../../CSS/iframe.css">
 </head>
 
 <body>
-	<nav>
-		<button class="button" onclick="location.href='../aufgaben.html';">Zurück</button>
-	</nav>
-	<div>
-		<div>
-			<div">
-				<p>Schreiben Sie eine Funktion identity(), die ein Argument als Parameter entgegen nimmt und dieses als
-					Ergebnis zurück gibt.</p>
-		</div>
+	<div class="dcenter">
+		<p>
+			Diese Aufgabe war eine reine Javascript-Aufgabe.
+		</p>
 	</div>
-	<div>
-		<div>
-			<code>function identity_function(x) {<br/></code>
-			<code style="padding-left: 15px">return function(x) { <br/></code>
-			<code style="padding-left: 30px">return x;<br/></code>
-			<code style="padding-left: 15px">};<br/></code>
-			<code>}</code>
 
-			<button id="print">Drucken</button>
-
-		</div>
-	</div>
-	</div>
 </body>
+<script>
+	function identity(x) {
+		return x;
+	};
+	function identity_function(x) {
+		return function b(x) {
+			return x;
+		};
+	}
+	function add(x, y) {
+		return +x + +y;
+	}
+	function mul(x, y) {
+		var total = x * y;
+		return total;
+	} function addf(x) {
+		return function (y) {
+			return +x + +y;
+		};
+	}
+	function applyf(f) {
+		return function (x) {
+			return function (y) {
+				return f(x, y);
+			};
+		};
+	}
+
+
+</script>
 
 </html>
-<script>
-	document.getElementById('print').onclick = function () {
-		window.print();
-	}
-</script>
