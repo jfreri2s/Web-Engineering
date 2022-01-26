@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Aufgabe 5-1</title>
+    <link rel="stylesheet" href="../../CSS/iframe.css">
+</head>
+
+<body onload="performance()">
+    <div id="1">
+        <table>
+            <tr>
+                <th>Befehl</th>
+                <th>Zeit lesen</th>
+            </tr>
+            <tr>
+                <td>innerHTML</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>innerText</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>textContent</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>outerHTML</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script>
+
+    const t0 = performance.now();
+    for (let i = 0; i < 100000; i++) {
+        document.getElementById(1).innerHTML = "" + i;
+    }
+    const t1 = performance.now();
+    const innerHTML = t1 - t0;
+
+    const t2 = performance.now();
+    for (let i = 0; i < 100000; i++) {
+        document.getElementById(1).innerText = "" + i;
+    }
+    const t3 = performance.now();
+    const innerText = t3 - t2;
+
+    const t4 = performance.now();
+    for (let i = 0; i < 100000; i++) {
+        document.getElementById(1).textContent = "" + i;
+    }
+    const t5 = performance.now();
+    const textContent = t5 - t4;
+
+    const t6 = performance.now();
+    for (let i = 0; i < 100000; i++) {
+        document.getElementById(1).outerHTML = `<div id=1>${i}</div>`;
+    }
+    const t7 = performance.now();
+    const outerHTML = t7 - t6;
+
+    const table = `<table><tr><th>innerHTML</th><th>innerText</th><th>textContent</th><th>outerHTML</th></tr>
+                              <tr><td>${innerHTML}ms</td><td>${innerText}ms</td><td>${textContent}ms</td><td>${outerHTML}ms</td></tr></table>`
+    document.getElementById(1).innerHTML = table;
+
+</script>
+
+</html>
