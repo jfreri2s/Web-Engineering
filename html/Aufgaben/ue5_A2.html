@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Aufgabe 5.2</title>
+	<title>Aufgabe 5-2</title>
 	<link rel="stylesheet" href="../../CSS/iframe.css">
 </head>
 
@@ -16,9 +16,6 @@
 		</head>
 
 		<body>
-			<nav>
-				<button class="button" onclick="location.href='../aufgaben.html';" >Zurück</button>
-			</nav> 
 		<h1>Rednderliste</h1>
 
 		Neuer Redner: <input type="text" name="addItem" id="addItem"> <button type="button" onClick="addItem()">Hinzufuegen</button>
@@ -26,7 +23,7 @@
 		<ul id="list">
 			<li>Anton <p>00:00:07</p> <button type="button" onClick="toggleStartStop(this)">Start!</button></li>
 			<li>Berta <p>00:00:04</p> <button type="button" onClick="toggleStartStop(this)">Start!</button></li>
-			<li>Carl <p>00:00:39</p> <button type="button" onClick="toggleStartStop(this)">Stopp!</button></li>
+			<li>Carl <p>00:00:39</p> <button type="button" onClick="toggleStartStop(this)">Stop!</button></li>
 		</ul>
 		</body>
 
@@ -101,7 +98,10 @@
 
 			}
 		</script>
-</html>
+	</html>
     </textarea>
+		<div class="resizer" id="dragMe"></div>
 		<iframe src="../Aufgaben/Lösungen/ue5_2.html"></iframe>
 	</div>
+
+	<script src="../../js/aufgaben.js"></script>

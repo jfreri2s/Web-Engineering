@@ -6,12 +6,12 @@ body {
 }
 
 iframe {
-  width: 70%;
+  width: 40%;
 }
 
 textarea {
   resize: none;
-  width: 30%;
+  width: 20%;
 }
 
 .codeAndiframe {
@@ -19,4 +19,11 @@ textarea {
   flex-direction: row;
   margin: 0px;
   height: 100%;
+}
+
+.resizer {
+  background-color: #cbd5e0;
+  cursor: ew-resize;
+  height: 100%;
+  width: 2px;
 }
