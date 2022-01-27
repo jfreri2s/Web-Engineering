@@ -1,14 +1,14 @@
 .excercise_grid {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(4, 1fr);
-    width: 98vw;
-    height: 98vh;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  width: 98vw;
+  height: 98vh;
 }
 .box {
-    background: rgb(219, 231, 221);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  background: rgb(219, 231, 221);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

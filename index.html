@@ -2,18 +2,42 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Web-Engineering</title>
-  <link rel="stylesheet" href="CSS/menu.css">
 </head>
+<style>
+  .dcenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    background-color: cornflowerblue;
+  }
+
+  .infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+
+  }
+</style>
 
 <body>
   <html>
   <div class="dcenter">
     <h2> Willkommen auf meiner Webseite zu Web-Engineering</h2>
-    <p>
-      Dies ist ein Semesterprojekt von Jan Frericks im Kurs Web-Engineering im Wintersemester 2021/2022.
-    </p>
-    <button onclick="location.href='html/aufgaben.html';">Hier geht es weiter</button>
+    <div class="infos">
+      <p>
+        Dies ist ein Semesterprojekt von Jan Frericks im Kurs Web-Engineering bei Prof. Dr. Manfred Kaul im
+        Wintersemester 2021/2022.
+      </p>
+      <button onclick="location.href='html/aufgaben.html';">Hier geht es weiter</button>
+    </div>
+
+
   </div>
 
   </html>

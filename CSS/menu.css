@@ -23,3 +23,19 @@
   align-items: center;
   height: 50%;
 }
+.navbar {
+  background-color: cornflowerblue;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
