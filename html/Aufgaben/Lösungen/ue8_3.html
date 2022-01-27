@@ -164,8 +164,8 @@
 
         ul.getElementsByTagName("a")[0].classList.add("active");
         active_vertical = ul.getElementsByTagName("a")[0].id;
-        var text = json[identifier][active_vertical]["content"];
-        document.getElementById("text").innerHTML = text;
+        var content = json[identifier][active_vertical]["content"];
+        document.getElementById("text").innerHTML = content;
         active_horizontal = identifier;
     }
 
@@ -173,11 +173,12 @@
         document.getElementById(active_vertical).classList.remove("active");
         document.getElementById(id).classList.add("active");
 
-        var text = json[identifier][id]["content"];
-        document.getElementById("text").innerHTML = text;
+        var content = json[identifier][id]["content"];
+        document.getElementById("text").innerHTML = content;
 
-        var text2 = json[identifier][id]["references"];
-        document.getElementById("ressources").innerHTML = text2;
+        var references = json[identifier][id]["references"];
+        document.getElementById("ressources").innerHTML = references;
+
         last_vertical = active_vertical;
         active_vertical = id;
         last_horizontal = active_horizontal;

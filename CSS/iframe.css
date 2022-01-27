@@ -6,7 +6,9 @@ body {
 }
 
 iframe {
-  width: 40%;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 textarea {
@@ -22,8 +24,8 @@ textarea {
 }
 
 .resizer {
-  background-color: #cbd5e0;
+  background-color: red;
   cursor: ew-resize;
   height: 100%;
-  width: 2px;
+  width: 4px;
 }
